@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+        </tr>
+        <tr th:each="stu:${stulist}">
+            <td th:text="${stu.userID}"></td>
+            <td th:text="${stu.userName}"></td>
+            <td th:text="${stu.sex}"></td>
+        </tr>
+    </table>
+</body>
+</html>

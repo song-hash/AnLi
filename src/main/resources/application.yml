@@ -1,0 +1,16 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/edu?characterEncoding=utf8
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+  thymeleaf:
+    cache: false            # 开发时关闭缓存，否则无法实时看到页面效果
+    mode: LEGACYHTML5       # 使用非严格的HTML标准
+    encoding: utf-8
+mybatis:
+  type-aliases-package: com.qf.entity
+  mapper-locations: classpath:com.qf.mapper/*Mapper.xml
